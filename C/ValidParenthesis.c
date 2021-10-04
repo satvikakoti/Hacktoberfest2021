@@ -11,10 +11,8 @@ Ex. {(([][{()}])} is Invalid parenthesis
 #define MAX_SIZE 50
 
 int top=-1;
-void initStack();
 void push(int ele);
 int pop();
-void display();
 int stackFull();
 int stackEmpty();
 int peek();
@@ -57,18 +55,6 @@ int peek()
     return myStack[top].val;
 }
 
-void display()
-{
-    if(top==-1)
-    {
-         stackEmpty();
-         return;
-    }
-    for(int i=top;i>=0;i--)
-        printf("%d ",myStack[i].val);
-    printf("\n");
-}
-
 int stackFull()
 {
 
@@ -99,7 +85,7 @@ int main()
     n=strlen(str);
     if(n==0||n==1)
     {
-         printf("Not Valid!");
+         printf("Not Valid Expression!");
          exit(0);
     }
     int i=0;
